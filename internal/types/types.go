@@ -18,9 +18,10 @@ type GitConfig struct {
 	// The repository Path
 	Path string
 	// The directory in the repository
-	Dir               string
-	Remotes           []Remote
-	GpgPublicKeyPaths []string
+	Dir                string
+	Remotes            []Remote
+	GpgPublicKeyPaths  []string
+	AllowForcePushMain bool
 }
 
 type Auth struct {
@@ -53,5 +54,6 @@ type Configuration struct {
 	ApiServer             HttpServer `yaml:"api_server"`
 	Exporter              HttpServer `yaml:"exporter"`
 	GpgPublicKeyPaths     []string   `yaml:"gpg_public_key_paths"`
+        AllowForcePushMain bool       `yaml:"allow_force_push_main"`
 	PostDeploymentCommand string     `yaml:"post_deployment_command"`
 }
