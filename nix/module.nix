@@ -12,6 +12,7 @@ let
       port = cfg.services.comin.exporter.port;
     };
     gpg_public_key_paths = cfg.services.comin.gpgPublicKeyPaths;
+    allow_force_push_main = cfg.services.comin.allowForcePushMain;
   } // (
     lib.optionalAttrs (cfg.services.comin.postDeploymentCommand != null)
       { post_deployment_command = cfg.services.comin.postDeploymentCommand; }

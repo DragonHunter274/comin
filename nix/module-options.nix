@@ -186,6 +186,11 @@
           pkgs.writers.writeBash "post" "echo $COMIN_GIT_SHA";
         '';
       };
+      allowForcePushMain = mkOption {
+        description = "Switch to configuration even when a force-push was detected on main.";
+        type = bool;
+        default = false;
+      };
     };
   };
 }
